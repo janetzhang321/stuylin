@@ -1,0 +1,16 @@
+ul{
+	background:red;
+}
+
+li{
+	border:2px solid;
+	border-radius:5px;
+	background: pink;
+	width: 25%;
+	text-align:center;
+}
+
+li:hover{
+	background: steelblue;
+}
+
