@@ -10,3 +10,28 @@ h1{
 p{
 	font-family: "Georgia", Georgia, serif;
 }
+
+.extreme{
+	font-size: 40px;
+	font-family: "Comic Sans MS", "Comic Sans", cursive;
+	color: black;
+	text-shadow: 2px 2px #ff0000;
+}
+
+#head1{
+	font-family: "Arial";
+}
+
+.navzone{
+	background:palevioletred;
+	color:thistle;
+}
+
+.content{
+	font-size: .5em;
+}
+
+.prose{
+	color:peru;
+	font-variant: small-caps;
+}
