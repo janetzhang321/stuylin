@@ -6,6 +6,8 @@ body{
     background:white;
     border:2px solid black;
     transform: matrix3d(1,0,0.00,0,0.00,1,0.00,.001875,0,0,1,0,0,0,0,1);
+    overflow:auto;
+    height:150px;
 }
 ol:before{
     content: url("http://vignette4.wikia.nocookie.net/runescape2/images/9/9f/Red_herring_detail.png/revision/latest?cb=20140805223541");
@@ -17,22 +19,46 @@ ol{
 
 ol li{
     color:yellow;
+    text-shadow: 2px 2px purple;
 }
 
 .animate{
 
     animation-name: animate;
-    animation-duration: 20s;
+    animation-duration: 10s;
     padding: 50px;
+    -webkit-animation-iteration-count: infinite;
 }
 
 @keyframes animate {
     from {
-        background-color: red;
+        transform: matrix3d(
+            1,	0,	0,	0,
+            0,	1,	0,	0,
+            0,	0,	1,	0,
+            0,	0,	0,	1
+        );
+        background: radial-gradient(rebeccapurple,deeppink,lightcoral,darkorange,yellow,springgreen,darkgreen,blue,darkblue);
         color: #141204;
     }
     to {
+        transform: matrix3d(
+            -1,	-0.5,	0,	0,
+            -2,	-3,	0,	0,
+            0,	0,	1,	0,
+            350,	350,	0,	1
+        );
         color:red;
-        background-color: #141204;
+        background: radial-gradient(darkblue,blue,darkgreen,springgreen,yellow,darkorange,lightcoral,deeppink,rebeccapurple);;
     }
+    
 }
+
+#rotate{
+    -webkit-animation:spin 4s linear infinite;
+    -moz-animation:spin 4s linear infinite;
+    animation:spin 4s linear infinite;
+}
+@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
