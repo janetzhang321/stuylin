@@ -1,0 +1,38 @@
+body{
+    background: mediumpurple;
+}
+
+.movie{
+    background:white;
+    border:2px solid black;
+    transform: matrix3d(1,0,0.00,0,0.00,1,0.00,.001875,0,0,1,0,0,0,0,1);
+}
+ol:before{
+    content: url("http://vignette4.wikia.nocookie.net/runescape2/images/9/9f/Red_herring_detail.png/revision/latest?cb=20140805223541");
+}
+
+ol{
+    background: radial-gradient(circle,rebeccapurple,deeppink,lightcoral,darkorange,yellow,springgreen,darkgreen,blue,darkblue);
+}
+
+ol li{
+    color:yellow;
+}
+
+.animate{
+
+    animation-name: animate;
+    animation-duration: 20s;
+    padding: 50px;
+}
+
+@keyframes animate {
+    from {
+        background-color: red;
+        color: #141204;
+    }
+    to {
+        color:red;
+        background-color: #141204;
+    }
+}
